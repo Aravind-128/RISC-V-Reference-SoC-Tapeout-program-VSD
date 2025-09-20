@@ -3,17 +3,16 @@
    - **VSD program end goal is to make a chip that can run applications**
    - **The chip supports a frequency range from 100 MHz up to 130 MHz**
    - **DESIGN FLOW**
-   ` RTL DESIGN ->  SYNTHESIS  -> RTL2GDS -> PHYSICAL DESIGN -> DRC/LVS checks -> CHIP `
+    -` RTL DESIGN ->  SYNTHESIS  -> RTL2GDS -> PHYSICAL DESIGN -> DRC/LVS checks -> CHIP `
 
 ---
 
-  - step1.we take the testbench and compile it with GCC , produce a output O0.
-  - step2.According to the specifications, the C model generates the output O1.
-  - step3.A Register-Transfer Level (RTL) implementation in Verilog provides the soft copy of the hardware, which                  integrates the processor and peripherals within a typical SoC design flow, produce a output O2.
-  - step4.SoC integration of GPIOs is carried out as part of the RTL-to-GDSII flow , produce a output O3.
-  - step5.Post-GDSII, Design Rule Checking (DRC) and Layout Versus Schematic(LVS) checks are conducted to validate the            physical layout.
-  - step6.Upon completion of design and testing, the chip generated output O4, which was found to be equal 
-         to O1, O2, and O3.
+- **Step 1:** We take the testbench and compile it with GCC, producing an output **O0**.  
+- **Step 2:** According to the specifications, the C model generates the output **O1**.  
+- **Step 3:** A Register-Transfer Level (RTL) implementation in Verilog provides the soft copy of the hardware, which integrates the processor and peripherals within a typical SoC design flow, producing output **O2**.  
+- **Step 4:** SoC integration of GPIOs is carried out as part of the RTL-to-GDSII flow, producing output **O3**.  
+- **Step 5:** Post-GDSII, Design Rule Checking (DRC) and Layout Versus Schematic (LVS) checks are conducted to validate the physical layout.  
+- **Step 6:** Upon completion of design and testing, the chip generates output **O4**, which was found to be equal to **O1**, **O2**, and **O3**.
     
 ---
 
