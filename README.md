@@ -19,9 +19,9 @@
  # Week- 0 - Installation of tools 
 
   System requirements
-     -6GB RAM, 50 GB HDD
-     -Ubuntu 20.04+
-     -4vCPU
+     - **6GB RAM, 50 GB HDD**
+     - **Ubuntu 20.04+**
+     - **4vCPU**
      
 
   # Yosys 
