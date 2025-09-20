@@ -1,10 +1,11 @@
 # RISC-V-Reference-SoC-Tapeout-program-VSD
 
-   **VSD program end goal is to make a chip that can run applications**
-   **The chip supports a frequency range from 100 MHz up to 130 MHz**
-   **DESIGN FLOW**
+   - **VSD program end goal is to make a chip that can run applications**
+   - **The chip supports a frequency range from 100 MHz up to 130 MHz**
+   - **DESIGN FLOW**
    ` RTL DESIGN ->  SYNTHESIS  -> RTL2GDS -> PHYSICAL DESIGN -> DRC/LVS checks -> CHIP `
 
+---
 
   - step1.we take the testbench and compile it with GCC , produce a output O0.
   - step2.According to the specifications, the C model generates the output O1.
@@ -14,7 +15,7 @@
   - step6.Upon completion of design and testing, the chip generated output O4, which was found to be equal 
          to O1, O2, and O3.
     
-
+---
 
  # Week- 0 - Installation of tools 
 
