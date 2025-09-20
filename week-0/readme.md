@@ -1,12 +1,5 @@
-
-
-   - **VSD program end goal is to make a chip that can run applications**
-   - **The chip supports a frequency range from 100 MHz up to 130 MHz**
-   - **DESIGN FLOW**
-    -` RTL DESIGN ->  SYNTHESIS  -> RTL2GDS -> PHYSICAL DESIGN -> DRC/LVS checks -> CHIP `
-
----
-
+ # Learnings of week-0
+ # DESIGN FLOW
 - **Step 1:** We take the testbench and compile it with GCC, producing an output **O0**.  
 - **Step 2:** According to the specifications, the C model generates the output **O1**.  
 - **Step 3:** A Register-Transfer Level (RTL) implementation in Verilog provides the soft copy of the hardware, which integrates the processor and peripherals within a typical SoC design flow, producing output **O2**.  
