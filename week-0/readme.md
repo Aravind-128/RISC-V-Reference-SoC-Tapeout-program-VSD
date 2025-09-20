@@ -30,14 +30,15 @@
     $ make
     $ sudo make install
 
-![Installation verification](yosys.png)
+ ![Installation verification](yosys.png)
 
   # iverilog
     sudo apt-get update
     sudo apt-get install iverilog
+   ![Installation verification](iverilog.png)
 
   # Gtkwave 
     sudo apt-get update
     sudo apt install gtkwave
- 
+  ![Installation verification](gtkwave.png)
  
