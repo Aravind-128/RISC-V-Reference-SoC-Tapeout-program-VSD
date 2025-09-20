@@ -30,7 +30,7 @@
     $ make
     $ sudo make install
 
- ![Installation verification](yosys.png)
+ -[Installation verification](yosys.png)
 
   # iverilog
     sudo apt-get update
