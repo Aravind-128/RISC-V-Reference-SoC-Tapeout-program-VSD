@@ -17,3 +17,10 @@
   # Iverilog based simulation flow
   
   ![design flow](iverilog_design_flow.png)
+
+
+  # What is synthesizer ?
+   - Tool used for converting RTL to netlist
+   - Yosys is the synthesizer used in this course
+
+     
