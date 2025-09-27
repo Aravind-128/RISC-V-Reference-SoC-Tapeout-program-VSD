@@ -22,5 +22,26 @@
   # What is synthesizer ?
    - Tool used for converting RTL to netlist
    - Yosys is the synthesizer used in this course
+     
+  ![yosys](yos.png)
 
+  # Structure of RTL
+
+  ![rtl](rtl.png)
+
+  # what does synthesizer do ?
+  - RTL to gate level translation
+  - The design is converted into gates and the connections are
+    made between the gates
+  - This is given out as a file called netlist
+
+   ![Alt Text](synthesis.png)
+
+  # What is a .lib file ?
+  - collection of logical modules
+  - Includes basis logic gates like AND,OR,NOT , etc.
+  - Contains different flavors of same gate
+    
+  
+  
      
