@@ -41,6 +41,8 @@
   - collection of logical modules
   - Includes basis logic gates like AND,OR,NOT , etc.
   - Contains different flavors of same gate
+
+  ![lib file](lib.png)
     
   
   
