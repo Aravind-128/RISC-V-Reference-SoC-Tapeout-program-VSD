@@ -53,11 +53,11 @@
    - The PLL activates upon input, producing a synchronized clock to coordinate CPU and DAC operations.
    - Ensures data integrity and timing accuracy.
 
- # Data Processing (RVMYTH CPU):
+ # 2.Data Processing (RVMYTH CPU):
    - Uses its registers (e.g., r17) to cycle through digital values for the DAC.
    - Generates continuous digital streams for analog conversion.
 
- # Analog Signal Generation (DAC):
+ # 3.Analog Signal Generation (DAC):
    - Converts digital values from RVMYTH into analog outputs.
    - Interfaces with consumer electronics to produce sound or video.
 
@@ -115,9 +115,12 @@ In VSDBabySoC, the PLL provides a stable clock signal for synchronizing the RVMY
  # Structure of a DAC
   - Multiple digital input lines (number of bits determines resolution).
   - A single analog output.
+
+    
     **Weighted resistor DAC**:A weighted resistor DAC is a digital-to-analog converter that uses binary-weighted
         resistors to convert a digital input code into an equivalent analog output voltage or current.
     ![My logo](BWR_DAC.png)
+
     
     **R-2R ladder DAC** :An R-2R ladder DAC (Digital-to-Analog Converter) is a circuit that converts a digital input
       into an analog output using a simple network of only two types of resistors: R and 2R.
