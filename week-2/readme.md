@@ -61,6 +61,71 @@
    - Converts digital values from RVMYTH into analog outputs.
    - Interfaces with consumer electronics to produce sound or video.
 
+ ![My logo](vsdbabysoc.png)
+
+ # Phase-Locked Loop (PLL)
+ A Phase-Locked Loop (PLL) is an electronic control system that generates an output signal whose phase is aligned (locked) to an input reference signal. Essentially, it ensures that the output “follows” the input in frequency and phase.
+
+In VSDBabySoC, the PLL provides a stable clock signal for synchronizing the RVMYTH CPU and DAC, ensuring proper timing across the system.
+
+ # Block diagram
+
+ ![My logo](pll.png)
+
+ # Key Components of a PLL
+  # 1.Phase detector
+   - Compares the phase of the input reference signal with the phase of the output signal.
+   - Produces an error signal proportional to the phase difference.
+  # 2.Loop filter(LF)
+   - Usually a low-pass filter.
+   - Smooths the error signal from the phase detector to produce a control voltage.
+   - Eliminates high-frequency noise to ensure stable operation.
+  # 3.Voltage-Controlled Oscillator (VCO)
+   - Generates a periodic output signal (clock) whose frequency depends on the control voltage from the loop filter.
+   - Adjusts its frequency until it matches the reference signal frequency and phase.
+  # 4.Optional Frequency Divider
+   - Used in the feedback loop to scale the frequency (e.g., multiply or divide by a factor).
+   - Allows the PLL to generate different clock frequencies from the same reference.
+     
+ # How a PLL Works 
+   - The input reference clock is compared with the PLL output in the phase detector.
+   - If there’s a phase difference, the PD generates an error signal.
+   - The loop filter smooths this signal and feeds it to the VCO.
+   - The VCO adjusts its frequency based on the control voltage.
+   - The system stabilizes when the output is locked in phase and frequency with the input.
+ # Why PLLs Are Needed
+   - **Clock Synchronization**: Ensures all parts of a chip operate in sync.
+   - **Frequency Generation**: Can produce higher or lower frequencies than the input reference.
+   - **Jitter Reduction**: Stabilizes clock signals by filtering out timing variations.
+   - **Multiple Clock Domains**: Supports different blocks needing different clock frequencies.
+ # Challenges with Off-Chip Clocks
+   - **1.Clock Distribution Delays**: Long wires on a chip cause signal delays.
+   - **2.Clock Jitter**: Variations in timing can affect synchronization.
+   - **3.Frequency Requirements**: Different blocks might require different clock speeds.
+   - **4.Crystal Frequency Deviations**: Quartz crystals have slight errors (measured in ppm) affected by temperature and aging.
+   - PLL solves these problems by generating a precise, stable, and tunable on-chip clock.
+     
+# Digital-to-Analog Converter (DAC)
+  A Digital-to-Analog Converter (DAC) converts digital data (binary numbers) into an analog signal, like voltage or current. In VSDBabySoC, the DAC converts the digital output of the RVMYTH CPU into analog signals for devices such as TVs or speakers.
+
+ # How a DAC Works
+  - The digital input (e.g., 10-bit value) represents a number between 0 and 2^10-1 (0–1023).
+  - The DAC converts this number into a proportional analog voltage or current.
+  - This analog signal can then drive external devices.
+ # Structure of a DAC
+  - Multiple digital input lines (number of bits determines resolution).
+  - A single analog output.
+    **Weighted resistor DAC**:A weighted resistor DAC is a digital-to-analog converter that uses binary-weighted
+        resistors to convert a digital input code into an equivalent analog output voltage or current.
+    ![My logo](BWR_DAC.png)
+    
+    **R-2R ladder DAC** :An R-2R ladder DAC (Digital-to-Analog Converter) is a circuit that converts a digital input
+      into an analog output using a simple network of only two types of resistors: R and 2R.
+    ![](R_DAC.png)
+
+    
+ 
+
  
  
  
