@@ -126,6 +126,45 @@ In VSDBabySoC, the PLL provides a stable clock signal for synchronizing the RVMY
       into an analog output using a simple network of only two types of resistors: R and 2R.
     ![](R_DAC.png)
 
+
+  # VSDbabySoc project
+
+  # Requirements 
+   Ensure you have Icarus Verilog installed for compilation and GTKWave for viewing waveform files. This project assumes a Unix-like environment (macOS/Linux).
+
+  # step by step guide
+   clone or setup the directory structure as follows:
+       
+       VSDBabySoC/
+       ├── src/
+       │   ├── include/
+       │   │   ├── sandpiper.vh
+       │   │   └── other header files...
+       │   ├── module/
+       │   │   ├── vsdbabysoc.v      # Top-level module integrating all components
+       │   │   ├── rvmyth.v          # RISC-V core module
+       │   │   ├── avsdpll.v         # PLL module
+       │   │   ├── avsddac.v         # DAC module
+       │   │   └── testbench.v       # Testbench for simulation
+       └── output/
+       └── compiled_tlv/         # Holds compiled intermediate files if needed
+
+  # cloning the repo
+        cd Soc
+        git clone https://github.com/manili/VSDBabySoC.git
+        cd VSDBabySoC/
+
+
+  # Steps to stimulate rvmyth
+  
+    git clone https://github.com/kunalg123/rvmyth/
+    cd rvmyth
+    iverilog mythcore_test.v tb_mythcore_test.v
+    ./a.out
+    gtkwave tb_mythcore_test.vcd
+
+  
+
     
  
 
